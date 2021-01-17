@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation Page</title>
+
+  <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>Quick links</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#What_is_TypeScript?">What is TypeScript?</a>
+    <a class="nav-link" href="#Local_Environment_Setup">Local Environment Setup</a>
+    <a class="nav-link" href="#Compile_and_Execute_a_TypeScript_Program">Compile and Execute a TypeScript Program</a>
+    <a class="nav-link" href="#Types">Types</a>
+    <a class="nav-link" href="#Variable_Declaration_in_TypeScript">Variable Declaration in TypeScript</a>
+    <a class="nav-link" href="#Functions">Functions</a>
+    <a class="nav-link" href="#Reference">Reference</a>
+  </nav>
+
+  <main id="main-doc">
+    <header>
+      <h1>TypeScript Documentation</h1>
+    </header>
+    <section id="Introduction" class="main-section">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+      <article>
+        <p> JavaScript was introduced as a language for the client side. The development of Node.js has marked
+          JavaScript as an emerging server-side technology too. However, as JavaScript code grows, it tends to get
+          messier, making it difficult to maintain and reuse the code. Moreover, its failure to embrace the features
+          of Object Orientation, strong type checking and compile-time error checks prevents JavaScript from
+          succeeding at the enterprise level as a full-fledged server-side technology. TypeScript was presented to
+          bridge this gap. </p>
+      </article>
+    </section>
+    <section id="What_is_TypeScript?" class="main-section">
+      <header>
+        <h2>What is TypeScript?</h2>
+      </header>
+      <article>
+        <p>By definition, “TypeScript is JavaScript for application-scale development.”</p>
+        <p>
+          TypeScript is a strongly typed, object oriented, compiled language. It was designed by Anders Hejlsberg
+          (designer of C#) at Microsoft. TypeScript is both a language and a set of tools. TypeScript is a typed
+          superset of JavaScript compiled to JavaScript. In other words, TypeScript is JavaScript plus some additional
+          features.
+        </p>
+      </article>
+    </section>
+    <section id="Local_Environment_Setup" class="main-section">
+      <header>
+        <h2>Local Environment Setup</h2>
+      </header>
+      <article>
+        <p>Typescript is an Open Source technology. It can run on any browser, any host, and any OS. You will need the
+          following tools to write and test a Typescript program:</p>
+
+        <h3>A Text Editor</h3>
+        <p> The text editor helps you to write your source code. Examples of a few editors include Windows Notepad,
+          Notepad++, Emacs, vim or vi, etc. Editors used may vary with Operating Systems. The source files are typically
+          named with the extension .ts</p>
+
+        <h3>The TypeScript Compiler</h3>
+        <p>The TypeScript compiler is itself a .ts file compiled down to JavaScript (.js) file. The TSC (TypeScript
+          Compiler) is a source-to-source compiler (transcompiler / transpiler).</p>
+
+        <p>The TSC generates a JavaScript version of the .ts file passed to it. In other words, the TSC produces an
+          equivalent JavaScript source code from the Typescript file given as an input to it. This process is termed as
+          transpilation.</p>
+
+        <p>However, the compiler rejects any raw JavaScript file passed to it. The compiler deals with only .ts or .d.ts
+          files.</p>
+
+        <h3>Node.js</h3>
+        <p>Node.js is an open source, cross-platform runtime environment for server-side JavaScript. Node.js is required
+          to run JavaScript without a browser support. It uses Google V8 JavaScript engine to execute code. You may
+          download Node.js source code or a pre-built installer for your platform. Node is available here −
+          https://nodejs.org/en/download.</p>
+      </article>
+    </section>
+    <section id="Compile_and_Execute_a_TypeScript_Program" class="main-section">
+      <header>
+        <h2>Compile and Execute a TypeScript Program</h2>
+      </header>
+      <article>
+        <p>Let us see how to compile and execute a TypeScript program using Visual Studio Code. Follow the steps given
+          below:</p>
+
+        <p><strong>Step 1</strong> − Save the file with .ts extension. We shall save the file as Test.ts. The code
+          editor marks errors in the code, if any, while you save it.</p>
+
+        <p><strong>Step 2</strong> − Right-click the TypeScript file under the Working Files option in VS Code’s Explore
+          Pane. Select Open in Command Prompt option.</p>
+
+        <p><strong>Step 3</strong> − To compile the file use the following command on the terminal window.</p>
+
+        <code>tsc Test.ts</code>
+
+        <p><strong>Step 4</strong> − The file is compiled to Test.js. To run the program written, type the following in
+          the terminal.</p>
+
+        <code>node Test.js</code>
+
+        <p><strong>Note</strong> − Multiple files can be compiled at once.</p>
+
+        <code>tsc file1.ts, file2.ts, file3.ts</code>
+      </article>
+    </section>
+    <section id="Types" class="main-section">
+      <header>
+        <h2>Types</h2>
+      </header>
+      <article>
+        <p>The Type System represents the different types of values supported by the language. The Type System checks
+          the validity of the supplied values, before they are stored or manipulated by the program. This ensures that
+          the code behaves as expected. The Type System further allows for richer code hinting and automated
+          documentation too.</p>
+
+        <p>TypeScript provides data types as a part of its optional Type System. The data type classification is as
+          given below:</p>
+        <ul>
+          <li><strong>Any</strong>: the super tpe of all data types.</li>
+          <li><strong>Built-in types</strong>: include number, string, boolean, void, null and undefined.</li>
+          <li><strong>User-defined types</strong>: include Arrays, Enums, Classes, Interfaces, etc.</li>
+        </ul>
+
+        <h3>The Any type</h3>
+        <p>The any data type is the super type of all types in TypeScript. It denotes a dynamic type. Using the any type
+          is equivalent to opting out of type checking for a variable.</p>
+
+        <h3>Built-in types</h3>
+        <p>The following table illustrates all the built-in types in TypeScript:</p>
+        <table id="built-in_types_table">
+          <thead>
+            <th>Data type</th>
+            <th>Keyword</th>
+            <th>Description</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Number</td>
+              <td>number</td>
+              <td>Double precision 64-bit floating point values. It can be used to represent both, integers and
+                fractions.</td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td>string</td>
+              <td>Represents a sequence of Unicode characters.</td>
+            </tr>
+            <tr>
+              <td>Boolean</td>
+              <td>boolean</td>
+              <td>Represents logical values, true and false.</td>
+            </tr>
+            <tr>
+              <td>Void</td>
+              <td>void</td>
+              <td>Used on function return types to represent non-returning functions.</td>
+            </tr>
+            <tr>
+              <td>Null</td>
+              <td>null</td>
+              <td>Represents an intentional absence of an object value.</td>
+            </tr>
+            <tr>
+              <td>Undefined</td>
+              <td>undefined</td>
+              <td>Denotes value given to all uninitialized variables.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Note</strong> − There is no integer type in TypeScript and JavaScript.</p>
+
+        <h3>Null and undefined ─ Are they the same?</h3>
+        <p>The null and the undefined datatypes are often a source of confusion. The null and undefined cannot be used
+          to reference the data type of a variable. They can only be assigned as values to a variable.</p>
+
+        <p>However, null and undefined are not the same. A variable initialized with undefined means that the variable
+          has no value or object assigned to it while null means that the variable has been set to an object whose value
+          is undefined.</p>
+
+        <h3>User-defined Types</h3>
+        <p>User-defined types include Enumerations (enums), classes, interfaces, arrays, and tuple. These are discussed
+          in detail in the later chapters.</p>
+      </article>
+    </section>
+    <section id="Variable_Declaration_in_TypeScript" class="main-section">
+      <header>
+        <h2>Variable Declaration in TypeScript</h2>
+      </header>
+      <article>
+        <p>The type syntax for declaring a variable in TypeScript is to include a colon (:) after the variable name,
+          followed by its type. Just as in JavaScript, we use the var keyword to declare a variable.</p>
+
+        <p>When you declare a variable, you have four options:</p>
+        <ul>
+          <li>Declare its type and value in one statement.</li>
+          <code><span class="keyword">var</span> <span class="identifier">[identifier]</span>: <span class="class-name">[type-annotation]</span> = value;</code>
+          <li>Declare its type but no value. In this case, the variable will be set to undefined.</li>
+          <code><span class="keyword">var</span> <span class="identifier">[identifier]</span>: <span class="class-name">[type-annotation]</span>;</code>
+          <li>Declare its value but no type. The variable type will be set to the data type of the assigned value.</li>
+          <code><span class="keyword">var</span> <span class="identifier">[identifier]</span> = value;</code>
+          <li>Declare neither value not type. In this case, the data type of the variable will be any and will be
+            initialized to undefined.</li>
+          <code><span class="keyword">var</span> <span class="identifier">[identifier]</span>;</code>
+        </ul>
+
+        <p><strong>Examples:</strong></p>
+        <code>
+          <span class="keyword">var</span> <span class="identifier">name</span>: <span class="class-name">String</span> = <span class="string-value">'John'</span>;<br>
+          <span class="keyword">var</span> <span class="identifier">name</span>: <span class="class-name">String</span>;<br>
+          <span class="keyword">var</span> <span class="identifier">name</span> = <span class="string-value">'John'</span>;<br>
+          <span class="keyword">var</span> <span class="identifier">name</span>;
+        </code>
+      </article>
+    </section>
+    <section id="Functions" class="main-section">
+      <header>
+        <h2>Functions</h2>
+      </header>
+      <article>
+        <p>Functions are the building blocks of readable, maintainable, and reusable code. A function is a set of
+          statements to perform a specific task. Functions organize the program into logical blocks of code. Once
+          defined, functions may be called to access code. This makes the code reusable. Moreover, functions make it
+          easy to read and maintain the program’s code.</p>
+
+        <p>A function declaration tells the compiler about a function's name, return type, and parameters. A function
+          definition provides the actual body of the function.</p>
+
+        <h3>Syntax</h3>
+        <code>
+          <span class="keyword">function</span> <span class="identifier">function_name</span>() {
+          <pre class="code-comment">  // function body</pre>
+          }
+        </code>
+        <p><strong>Example:</strong></p>
+        <code>
+          <span class="keyword">function</span> <span class="identifier">exampleFunction</span>() {
+          <pre class="code-comment">  // function body</pre>
+          <pre>  console.log(<span class="string-value">'function called'</span>);</pre>
+          }<br><br>
+          <pre class="code-comment">// call the function</pre>
+          <pre>exampleFunction();</pre>
+        </code>
+      </article>
+    </section>
+    <section id="Reference" class="main-section">
+      <header>
+        <h2>Reference</h2>
+      </header>
+      <p>All the documentation was taken from <a href="https://www.tutorialspoint.com/typescript/index.htm">Tutorials
+          point's TypeScript Tutorial</a>.</p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "responsive-web-design-certification",
+  "version": "1.0.0",
+  "description": "A compilation of projects needed to acquire the Responsive Web Design certification from freeCodeCamp.org.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OnixFang",
+  "license": "ISC"
+}

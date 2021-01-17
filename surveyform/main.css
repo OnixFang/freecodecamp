@@ -1,0 +1,28 @@
+body {
+  background-color: #171d29;
+}
+
+.form-container {
+  border: solid 2px #78ffae;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #91fff0, #f8c9ff);
+  padding: 40px;
+}
+
+.input-field input {
+  color: rgb(0, 116, 67);
+}
+
+.input-field label {
+  color: black;
+}
+
+.input-field input::placeholder {
+  color: rgb(112, 172, 147);
+}
+
+.form-header {
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
