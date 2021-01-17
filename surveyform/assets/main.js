@@ -4,7 +4,7 @@ function onSurveySubmit(e) {
   return false;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems);
 });
