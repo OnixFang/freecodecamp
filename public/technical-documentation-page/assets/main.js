@@ -11,13 +11,12 @@ window.addEventListener('scroll', (e) => {
   sections.forEach((section, index) => {
     let { top, height } = section.getBoundingClientRect();
 
-    if (
-      scrollPosition >= top + currentPosition &&
-      scrollPosition <= top + height + currentPosition
-    ) {
+    if (scrollPosition >= top + currentPosition && scrollPosition <= top + height + currentPosition) {
       navLinks[index].classList.add('active');
     } else {
       navLinks[index].classList.remove('active');
     }
   });
 });
+
+window.dispatchEvent(new CustomEvent('scroll'));
